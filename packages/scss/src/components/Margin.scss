@@ -1,0 +1,14 @@
+@use "../foundation";
+$sides: left, right, top, bottom;
+
+@each $space, $value in foundation.$spacing {
+    .fanz-margin-#{$space} {
+        margin: $value;
+    }
+
+    @each $side in $sides {
+        .fanz-margin-#{$side}-#{$space} {
+            margin-#{$side}: $value;
+        }
+    }
+}

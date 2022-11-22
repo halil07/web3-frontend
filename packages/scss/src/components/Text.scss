@@ -1,0 +1,10 @@
+@use "../foundation";
+.fanz-text {
+    margin: 0;
+}
+
+@each $size, $value in foundation.$fs {
+    .fanz-text-#{$size} {
+        font-size: $value;
+    }
+}

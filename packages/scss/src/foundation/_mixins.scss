@@ -1,0 +1,37 @@
+@import "./variables";
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+
+@mixin padding($space) {
+  padding: map-get($spacing, $space);
+}
+
+
+@mixin margin($space) {
+  margin: map-get($spacing, $space);
+}
+
+@each $size, $value in $spacing {
+  .fanz-width-#{$size} {
+    width: $value;
+  }
+  .fanz-height-#{$size} {
+    height: $value;
+  }
+}

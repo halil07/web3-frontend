@@ -1,0 +1,7 @@
+@use "../foundation";
+
+body {
+    font-family: foundation.$body-font-family;
+    font-size: foundation.$body-font-size;
+    font-weight: foundation.$body-font-weight;
+}

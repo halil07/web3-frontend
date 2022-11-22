@@ -1,0 +1,9 @@
+@use "../foundation";
+
+.fanz-button-container {
+  display: flex;
+  background: foundation.$btn-primary-bg;
+  color: foundation.$btn-primary-color;
+  border: none;
+  padding: map-get(foundation.$spacing, 'xxxs');
+}

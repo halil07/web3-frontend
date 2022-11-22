@@ -1,0 +1,67 @@
+@use "../foundation";
+.fanz-select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include foundation.padding('xs');
+        border: 1px solid foundation.$form-border-color;
+        background: foundation.$form-bg-color;
+        font-family: foundation.$body-font-family;
+        cursor: pointer;
+    }
+
+    &__caret {
+        transition: all 250ms ease;
+        &--open {
+            transform: rotate(180deg);
+        }
+        &--closed {
+            transform: rotate(0deg);
+        }
+    }
+
+    &__overlay {
+        @include foundation.padding('none');
+        @include foundation.margin('none');
+
+        border: 1px solid foundation.$form-border-color;
+        background-color: foundation.$form-bg-color;
+        z-index: 99;
+        display: none;
+        list-style-type: none;
+        box-shadow: map-get(foundation.$shadows, 'base');
+        position: absolute;
+        width: 100%;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        @include foundation.padding('xs');
+        box-sizing: border-box;
+    }
+
+    &__option--highlighted {
+        background-color: foundation.$form-bg-color-hover;
+    }
+
+    &__option--selected {
+        background-color: foundation.$form-bg-option-selected;
+        color: foundation.$form-color-option-selected;
+    }
+}
+
+.fanz-select__overlay {
+    &--open {
+        display: block;
+    }
+}

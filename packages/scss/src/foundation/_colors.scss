@@ -1,0 +1,18 @@
+@import "./variables";
+$body-text-color: var(--fanz-body-text-color, $dark) !default;
+$body-bg-color: var(--fanz-body-bg-color, $white) !default;
+
+$btn-primary-color: var(--fanz-btn-primary-color, $white) !default;
+$btn-primary-bg: var(--fanz-btn-primary-bg, $green) !default;
+$btn-primary-bg-hover: var(--fanz-btn-primary-bg-hover, $green-light) !default;
+
+$form-border-color: var(--fanz-form-border-color, $white-dark) !default;
+$form-bg-color: var(--fanz-form-bg-color, $white) !default;
+$form-bg-option-selected: var(--fanz-form-bg-option-selected, $green) !default;
+$form-color-option-selected: var(--fanz-form-color-option-selected, $white) !default;
+$form-bg-color-hover: var(--fanz-form-bg-color-hover, $white-dark) !default;
+$form-color: var(--fanz-form-color, $dark) !default;
+$form-bg: var(--fanz-form-bg, $white) !default;
+$form-error-color: var(--fanz-form-error-color, $red) !default;
+$form-error-border: var(--fanz-form-error-border, $red) !default;
+$form-border-focus-color: var(--fanz-form-border-focus-color, $green) !default;

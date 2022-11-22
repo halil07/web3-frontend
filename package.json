@@ -1,0 +1,45 @@
+{
+  "name": "@fanz-project/core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "turbo": "^1.1.10"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "test": "turbo run test",
+    "publish": "yarn test && yarn build && turbo publish",
+    "commit": "yarn git-cz",
+    "test:chromatic": "turbo run test:chromatic",
+    "build:storybook": "yarn build && turbo run build-storybook",
+    "preinstall": "yarn config set registry https://registry.npm.taobao.org",
+    "postinstall": "yarn build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

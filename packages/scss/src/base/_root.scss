@@ -1,0 +1,35 @@
+@use "../foundation";
+:root {
+  --fanz-body-text-color: #{foundation.$dark};
+  --fanz-body-bg-color: #{foundation.$white};
+
+  --fanz-btn-primary-color: #{foundation.$white};
+  --fanz-btn-primary-bg: #{foundation.$green};
+  --fanz-btn-primary-bg-hover: #{foundation.$green-light};
+
+  --fanz-btn-secondary-color: #{foundation.$white};
+  --fanz-btn-secondary-bg: #{foundation.$dark};
+
+  --fanz-form-color: #{foundation.$dark};
+  --fanz-form-bg: #{foundation.$white};
+  --fanz-form-error-color: #{foundation.$red};
+  --fanz-form-error-border: #{foundation.$red};
+  --fanz-form-border-focus-color: #{foundation.$green};
+
+  --fanz-body-font-size: #{foundation.$fs-base};
+  --fanz-body-font-weight: #{foundation.$fw-normal};
+
+  --fanz-h1-font-size: #{foundation.$h-1};
+  --fanz-h2-font-size: #{foundation.$h-2};
+  --fanz-h3-font-size: #{foundation.$h-3};
+  --fanz-h4-font-size: #{foundation.$h-4};
+  --fanz-h5-font-size: #{foundation.$h-5};
+  --fanz-h6-font-size: #{foundation.$h-6};
+
+  --fanz-h1-font-weight: #{foundation.$fw-medium};
+  --fanz-h2-font-weight: #{foundation.$fw-medium};
+  --fanz-h3-font-weight: #{foundation.$fw-medium};
+  --fanz-h4-font-weight: #{foundation.$fw-normal};
+  --fanz-h5-font-weight: #{foundation.$fw-normal};
+  --fanz-h6-font-weight: #{foundation.$fw-light};
+}

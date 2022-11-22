@@ -1,0 +1,38 @@
+{
+  "name": "@fanz-project/scss",
+  "version": "0.0.0",
+  "main": "dist/style.css",
+  "license": "MIT",
+  "dependencies": {},
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "sass": "^1.49.9",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-prettier": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "stylelint './**/*.scss'",
+    "lint:fix": "yarn lint --fix",
+    "build": "node src/scripts/build.js",
+    "dev": "nodemon --watch src --exec yarn build -e scss"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.scss": "yarn lint:fix"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

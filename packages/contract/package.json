@@ -1,0 +1,30 @@
+{
+  "name": "@fanz-project/contract",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/contract.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "nodemon --watch src --exec yarn build",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "bignumber.js": "^9.0.2",
+    "web3": "^1.7.1",
+    "@ethersproject/abi": "^5.6.0",
+    "@fanz-project/services": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3",
+    "vite": "^2.8.6",
+    "@types/node": "^17.0.23",
+    "@types/lodash": "^4.14.180",
+    "@types/web3": "^1.2.2",
+    "vite-plugin-dts": "^1.0.3",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@fanz-project/foundation",
+  "version": "0.1.3",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "test": "jest --verbose"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
